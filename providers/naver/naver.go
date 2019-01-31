@@ -8,7 +8,7 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	"github.com/markbates/goth"
+	"github.com/AKovalevich/goth"
 	"golang.org/x/oauth2"
 )
 

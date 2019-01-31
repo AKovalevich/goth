@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/markbates/goth"
+	"github.com/AKovalevich/goth"
 )
 
 // Session stores data during the auth process with VK.
@@ -45,10 +45,6 @@ func (s *Session) Authorize(provider goth.Provider, params goth.Params) (string,
 	}
 
 	email, ok := token.Extra("email").(string)
-	if !ok {
-		return "", errors.New("Cannot fetch user email")
-	}
-
 	userID, ok := token.Extra("user_id").(float64)
 	if !ok {
 		return "", errors.New("Cannot fetch user ID")

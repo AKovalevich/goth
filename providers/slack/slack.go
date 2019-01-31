@@ -11,7 +11,7 @@ import (
 	"net/url"
 
 	"fmt"
-	"github.com/markbates/goth"
+	"github.com/AKovalevich/goth"
 	"golang.org/x/oauth2"
 )
 
@@ -165,7 +165,7 @@ func userFromReader(r io.Reader, user *goth.User) error {
 				Name      string `json:"real_name"`
 				AvatarURL string `json:"image_32"`
 				FirstName string `json:"first_name"`
-				LastName string `json:"last_name"`
+				LastName  string `json:"last_name"`
 			} `json:"profile"`
 		} `json:"user"`
 	}{}
